@@ -8,32 +8,27 @@
 </head>
 <body>
     <form action="" method="POST">
-        <label for="numero_primo">Verifica se é Número Primo:</label>
-        <input type="number" name="numero_primo" id="numero_primo" required>
-        <button type="submit" name="verificar_primo">Verificar</button>
+        <div class="input-group">
+            <label class="label">Altura:</label>
+            <input autocomplete="off" name="Email" id="Email" class="input" type="number" required focus>
+            <label class="label">Base:</label>
+            <input autocomplete="off" name="Email" id="Email" class="input" type="number" required>
+            <div id="button">
+                <button type="submit" name="verificar_envio">Verificar</button>
+            </div>
+        </div>
     </form>
 
     <?php
-    // executa o código PHP somente quando acontecer a requesição
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            // isset --> verifica se a variável recebida no POST não está vazia.
-            if(isset($_POST['verificar_primo'])){
-                $numero = $_POST['numero_primo'];
-                $ehPrimo = true; // CamelCase pois difere das boas práticas do HTML/CSS/JS, visto que PHP usa CamelCase como boa prática
-
-                if($numero <= 1){
-                    $ehPrimo = false;
-                }else{
-                    for($i = 2; $i <= sqrt($numero); $i++){
-                        if($numero % $i == 0){
-                            $ehPrimo = false;
-                            break;
-                        }
-                    }
-                }
+    //verificar o método enviado
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            if($_POST["verificar_envio"]){
+                
             }
-            echo '<h1>O número ', $numero, ' é ', ($ehPrimo ? 'primo</h1>' : 'não é primo</h1>'); // resposta rápida
         }
+        // calcular a área do triângulo
+            // Verifique se a área calculada é maior do que um valor limite 100.
+            // Exiba uma mensagem informando se a área é maior ou menor/igual ao valor limite.
     ?>
 </body>
 </html>
