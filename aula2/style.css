@@ -72,3 +72,9 @@ form {
   background-color: rgb(2, 86, 182);
   transition: 0.2s;
 }
+
+p {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
