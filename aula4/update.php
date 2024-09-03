@@ -23,15 +23,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Update</title>
 </head>
 <body>
     <form action="update.php" method="post">
+        <p>UPDATE</p>
         <label for="nomeAntigo">Nome Antigo:</label>
         <input type="text" name="nomeAntigo" id="nomeAntigo">
         <label for="nomeNovo">Nome Novo:</label>
         <input type="text" name="nomeNovo" id="nomeNovo">
         <button type="submit">Atualizar</button>
+        <a href="./read.php">Visualizar Dados</a>
     </form>
 </body>
 </html>
